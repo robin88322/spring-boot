@@ -5,8 +5,8 @@ pipeline {
         finalname = "spring-boot-smoke-test-web-ui"
     }
     tools {
-        maven "Maven"
-        jdk "java"
+        maven "my maven"
+        //jdk "java"
     }
     
      stages {

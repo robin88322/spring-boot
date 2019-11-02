@@ -48,7 +48,7 @@ pipeline {
                         }"""
                 ) 
                 rtPublishBuildInfo (
-                    serverId: "jenk-artifactory-server"
+                    serverId: "my_artifact"
                 ) 
 
             }

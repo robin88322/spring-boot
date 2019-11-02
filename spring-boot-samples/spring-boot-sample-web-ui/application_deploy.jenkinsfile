@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage(DEPLOY){
             steps{
-                sh "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook  -i /var/lib/jenkins/workspace/integration/hosts /var/lib/jenkins/workspace/integration/playbook2.yml -e 'build=${env.select_build}'"
+                sh "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook  -i /var/lib/jenkins/workspace/integration/hosts /var/lib/jenkins/workspace/integration/playbook2.yml -e 'select_build=${env.select_build}'"
             }
         }
     }

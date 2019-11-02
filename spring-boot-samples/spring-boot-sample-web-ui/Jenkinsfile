@@ -2,7 +2,7 @@ pipeline {
 
     agent any
     environment {
-        finalname = "spring-boot-smoke-test-web-ui"
+        finalname = "spring-boot-sample-web-ui"
     }
     tools {
         maven "my maven"
@@ -57,7 +57,7 @@ pipeline {
         stage('Push to ECR') {
             steps {
                     echo "-----ECR-------"
-                    sh "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook  -i /var/lib/jenkins/workspace/integration/hosts /var/lib/jenkins/workspace/integration/playbook1.yml -e 'BUILD=${env.BUILD_NUMBER}'"
+                    sh "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook  -i /var/lib/jenkins/workspace/integration/hosts /var/lib/jenkins/workspace/integration/playbook1.yml -e 'build=${env.BUILD_NUMBER}'"
             }
 
         }

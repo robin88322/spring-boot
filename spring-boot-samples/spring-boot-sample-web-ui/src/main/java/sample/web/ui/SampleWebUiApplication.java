@@ -21,7 +21,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.convert.converter.Converter;
 
-@EnablePrometheusMetrics
+
 @SpringBootApplication
 public class SampleWebUiApplication {
 
